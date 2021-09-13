@@ -1,13 +1,24 @@
 #container {
+    background-color: rosybrown;
     width: 500px;
     height: 500px;
-    display: grid;
-    grid-template-columns: repeat( 16, 6.25%);
-    grid-template-rows: repeat(16, 6.25%);
+    
+    display: flex;
+    flex-wrap: wrap;
+   
+  
     
 }
 
 .gridBox {
-    background:rgb(0, 0, 0);
-    
+    background-color:salmon;
+    border: 1px solid rgb(0, 0, 0);
+    width: 29.25px;
+    height: 29.25px;
 }
+
+.gridBox:hover {
+    background-color: seagreen;
+}
+
+/* repeat(16, 6.25%); */
