@@ -1,24 +1,30 @@
+:root {
+
+    --containerHeight: 500px;
+    --gridBoxHeight: 29.25px;
+}
+h1{
+    text-align: center;
+}
 #container {
     background-color: rosybrown;
-    width: 500px;
-    height: 500px;
-    
+    width: var(--containerHeight);
+    height: var(--containerHeight);
     display: flex;
-    flex-wrap: wrap;
-   
-  
-    
+    flex-wrap: wrap;   
 }
 
 .gridBox {
     background-color:salmon;
     border: 1px solid rgb(0, 0, 0);
-    width: 29.25px;
-    height: 29.25px;
+    width: var(--gridBoxHeight);
+    height: var(--gridBoxHeight);
 }
 
-.gridBox:hover {
+.gridBoxMousedOver {
     background-color: seagreen;
+    border: 1px solid rgb(0, 0, 0);
+    width: var(--gridBoxHeight);
+    height: var(--gridBoxHeight);
 }
 
-/* repeat(16, 6.25%); */
