@@ -1,6 +1,10 @@
 const defaultSize = 16;
 let currentSize = defaultSize;
 
+const container = document.querySelector('#container');
+const clearButton = document.querySelector('#clear');
+
+
 
 
 function gridResizer(squares) {
@@ -17,14 +21,11 @@ function clearGrid() {
         gridItems.forEach((item) => {
             item.classList.remove('gridBoxMousedOver');
         });
+        container.innerHTML= '';
     }
 
-
-const container = document.querySelector('#container');
-const clearButton = document.querySelector('#clear');
-
-
 function createGrid(size) {
+    
     for (let i = 0; i < size*size; i++) {
         const div = document.createElement('div');
         div.classList.add('gridBox');
@@ -39,11 +40,19 @@ function createGrid(size) {
 clearButton.addEventListener("click", () => {
     clearGrid();
     currentSize = prompt('Size?');
-    gridResizer(currentSize);
-    createGrid(currentSize);
+    
+    console.log(typeof(currentSize));
+    if (currentSize == null || currentSize == undefined){
+        currentSize =defaultSize;
+        gridResizer(currentSize);
+        createGrid(currentSize);
+        console.log('oops');
+    } else if (currentSize <= 100 && currentSize >= 4) {
+        gridResizer(currentSize);
+        createGrid(currentSize);
+    } else console.log('outside of range');
+    
+    
 });   
 
 createGrid(currentSize);
-
-/* Can I just change const div to var?
-Will that push its scope outsode of the function? */

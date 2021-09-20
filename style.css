@@ -15,7 +15,7 @@ h1{
 }
 
 .gridBox {
-    background-color:salmon;
+    background-color:rgb(235, 97, 82);
      border: 1px solid rgb(0, 0, 0); 
     width: var(--gridBoxHeight);
     height: var(--gridBoxHeight);
