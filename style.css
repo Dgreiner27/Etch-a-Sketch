@@ -1,30 +1,38 @@
 :root {
 
-    --containerHeight: 500px;
+    --containerHeight: 600px;
     --gridBoxHeight: 29.25px;
+    --numberOfBoxes: 16;
+}
+body {
+    background-color:rgb(255, 234, 234)
 }
 h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
 }
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+}
 #container {
-    background-color: rosybrown;
+    margin: auto;
+    background-color: rgb(236, 236, 236);
     width: var(--containerHeight);
     height: var(--containerHeight);
-    display: flex;
-    flex-wrap: wrap;   
+    display: grid;
+    grid-template-columns: repeat(var(--numberOfBoxes), 1fr);
+    grid-template-rows: auto;  
 }
-
 .gridBox {
-    background-color:rgb(235, 97, 82);
-     border: 1px solid rgb(0, 0, 0); 
+    background-color:rgb(236, 236, 236);
     width: var(--gridBoxHeight);
     height: var(--gridBoxHeight);
 }
-
 .gridBoxMousedOver {
-    background-color: seagreen;
-    border: 1px solid rgb(0, 0, 0); 
+    background-color: rgb(128, 128, 128);
     width: var(--gridBoxHeight);
     height: var(--gridBoxHeight);
 }
-

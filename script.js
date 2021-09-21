@@ -9,7 +9,7 @@ const clearButton = document.querySelector('#clear');
 
 function gridResizer(squares) {
     let containerHeight = window.getComputedStyle(document.documentElement).getPropertyValue('--containerHeight');
-    let newSquareSize = (parseInt(containerHeight)-2*squares)/squares;
+    let newSquareSize = (parseInt(containerHeight) /*-2*squares*/)/squares;
     document.documentElement.style.setProperty('--gridBoxHeight', `${newSquareSize}px`);
     return newSquareSize;
 }
@@ -40,7 +40,7 @@ function createGrid(size) {
 clearButton.addEventListener("click", () => {
     clearGrid();
     currentSize = prompt('Size?');
-    
+    document.documentElement.style.setProperty('--numberOfBoxes', currentSize);
     console.log(typeof(currentSize));
     if (currentSize == null || currentSize == undefined){
         currentSize =defaultSize;
