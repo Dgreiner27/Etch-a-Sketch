@@ -1,8 +1,10 @@
 :root {
 
     --containerHeight: 600px;
-    --gridBoxHeight: 29.25px;
+    --gridBoxHeight: 37.5px;
     --numberOfBoxes: 16;
+    --gridColor: rgb(236, 236, 236);
+    --gridBoxColor: rgb(128, 128, 128);
 }
 body {
     background-color:rgb(255, 234, 234)
@@ -17,9 +19,14 @@ footer {
     left: 0;
     
 }
+button {
+    background-color: var(--gridColor);
+    margin-left: 2em;
+    padding: 3px 6px 3px 6px;
+}
 #container {
     margin: auto;
-    background-color: rgb(236, 236, 236);
+    background-color: var(--gridColor);
     width: var(--containerHeight);
     height: var(--containerHeight);
     display: grid;
@@ -27,12 +34,12 @@ footer {
     grid-template-rows: auto;  
 }
 .gridBox {
-    background-color:rgb(236, 236, 236);
+    background-color: var(--gridColor);
     width: var(--gridBoxHeight);
     height: var(--gridBoxHeight);
 }
 .gridBoxMousedOver {
-    background-color: rgb(128, 128, 128);
+    background-color: var(--gridBoxColor);
     width: var(--gridBoxHeight);
     height: var(--gridBoxHeight);
 }
